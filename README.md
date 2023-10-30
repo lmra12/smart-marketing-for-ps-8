@@ -35,7 +35,7 @@ For a workaround you can add this hook call to your **header.tpl**
 ```
 
 -- V.3.0.0
-   -- Add support to Prestashop 1.7.X / 8.X.X
+   -- Add support to Prestashop 8.X.X
    -- Remove all requests to E-goi deprecated API V2 
    -- Add suport to E-goi API V3
    -- Removed deprecated menu options
