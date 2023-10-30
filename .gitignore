@@ -1,0 +1,8 @@
+sftp-config.json
+.idea
+.DS_Store
+scripts
+prestashop
+Makefile
+Dockerfile
+Log
