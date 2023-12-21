@@ -33,7 +33,12 @@ For a workaround you can add this hook call to your **header.tpl**
 
 ### Changelog
 ```
-
+-- V.3.0.1
+   -- Remove unused overrides
+   -- Add Prestashop Logger on installation
+   -- Tested up to Prestashop 8.1.2
+   -- Bump plugin version to 3.0.1
+   
 -- V.3.0.0
    -- Add support to Prestashop 8.X.X
    -- Remove all requests to E-goi deprecated API V2 
