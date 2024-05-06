@@ -36,12 +36,14 @@ class SyncController extends SmartMarketingBaseController
 		if (!$this->module->active) {
             Tools::redirectAdmin($this->context->link->getAdminLink('AdminHome'));
         }
+        $newsletter = isset($_POST['newsletter']) ? $_POST['newsletter'] : false; //Indicates that it is a request related to the newsletter
+
         $this->retrieveRoles();
         $this->mapFieldsEgoi();
 		$this->syncronizeEgoi();
 		$this->sincronizeList();
         $this->sincronizeNewsletter();
-        $this->countCostumersByShop();
+        $this->countCostumersByShop($newsletter);
     }
 
 	/**
