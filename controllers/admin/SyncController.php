@@ -74,12 +74,12 @@ class SyncController extends SmartMarketingBaseController
 		);
     }
 
-    public function countCostumersByShop(){
+    public function countCostumersByShop($newsletter){
         if(empty(Tools::getValue("size"))) {
             return false;
         }
 
-        echo json_encode(SmartMarketingPs::sizeList());
+        echo json_encode(SmartMarketingPs::sizeList($newsletter));
         exit;
     }
 
