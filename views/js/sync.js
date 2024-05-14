@@ -206,7 +206,6 @@ $(document).ready(function() {
             type: 'POST',
             data:({
                 size: 1,
-                newsletter: true //Indicates that it is a request related to the newsletter
             }),
             success:function(data, status) {
                 var json = JSON.parse(data);
@@ -216,6 +215,8 @@ $(document).ready(function() {
                 $('#progressbarValues2').attr("aria-valuemax", totalPages);
                 $('#progressbarValues2').width("0%");
                 $('#progressbarValues2').text("0/" + totalPages);
+               
+
                 interactionN(json[0].id_shop,0);
 
             },
