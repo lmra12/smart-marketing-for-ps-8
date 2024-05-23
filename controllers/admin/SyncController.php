@@ -176,7 +176,9 @@ class SyncController extends SmartMarketingBaseController
                 $list_altered = true;
             }
 
+
             $this->assign('list_altered', $list_altered);
+            $this->assign('listValue', $listValue);
 			$this->assign('token', Tools::getValue('token'));
 			$this->assign('content', $this->fetch('sync.tpl'));
 		}
