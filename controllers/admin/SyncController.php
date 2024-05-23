@@ -166,7 +166,17 @@ class SyncController extends SmartMarketingBaseController
 
 				$this->assign('mapped_fields', $this->getMappedFields());
 			}
+            $id_authorization_role = Db::getInstance()->getValue("SELECT id_authorization_role FROM "._DB_PREFIX_."authorization_role WHERE slug = '".$val."'");
 
+            
+            $listValue = Db::getInstance()->getValue("SELECT list_id FROM "._DB_PREFIX_."egoi"); 
+            if($listValue == 0){
+                $list_altered = false;
+            }else{
+                $list_altered = true;
+            }
+
+            $this->assign('list_altered', $list_altered);
 			$this->assign('token', Tools::getValue('token'));
 			$this->assign('content', $this->fetch('sync.tpl'));
 		}
