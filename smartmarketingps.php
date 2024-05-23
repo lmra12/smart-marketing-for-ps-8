@@ -2626,10 +2626,10 @@ class SmartMarketingPs extends Module
                     $categoryNames[] = $category->getName();
                 }
                 // Add category names to the product
-                $product['category_names'] = $categoryNames;
+                $product['categories'] = $categoryNames;
             } else {
                 // If there are no associated categories, category_names will be an empty array
-                $product['category_names'] = array();
+                $product['categories'] = array();
             }
         }
 
