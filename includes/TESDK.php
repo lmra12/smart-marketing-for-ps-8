@@ -28,7 +28,7 @@ class TESDK
         foreach ($order['products'] as $product){
             $id = empty($product["variant_id"])?$product["id_product"]:$product["variant_id"];
             $product_price = empty($product['product_price_wt'])?$product['product_price']:$product['product_price_wt'];
-            $ec_items[] = ["{$id}",htmlentities($product['product_name']),$product['categories'],number_format($product_price,2), $product['product_quantity']];
+            $ec_items[] = ["{$id}",htmlentities($product['product_name']),$product['id_category_default'],number_format($product_price,2), $product['product_quantity']];
         }
 
         $data = [
@@ -51,8 +51,6 @@ class TESDK
             "s" => date("s")
         ];
 
-        var_dump($data);
-        die;
         $params = '?'.http_build_query($data);
         $this->getMethod(
             self::URL.$params
